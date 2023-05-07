@@ -1,0 +1,5 @@
+[submodule "src/contracts/transfer"]
+	path = src/contracts/transfer
+	url = ../transfer-contracts.git
+	branch = main
+
