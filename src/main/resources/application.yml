@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: attractions-service
+    datasource:
+      url: jdbc:postgresql://localhost:5432/attractions-service
+      username: postgres
+      password: postgres
+      driver-class-name: org.postgresql.Driver
+
+    jpa:
+      show_sql: true
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQL94Dialect
+    liquibase:
+      change-log: classpath:/db/migration/changelog.xml
+      url: jdbc:postgresql://localhost:5432/attractions-service
+      user: postgres
+      password: postgres
+
+server:
+  port: 8081
+
+logging:
+  level:
+    ROOT: INFO
